@@ -1,0 +1,24 @@
+type Metadata = record {
+  decimals : nat8;
+  owner : principal;
+  name : text;
+  total_supply : nat;
+  symbol : text;
+};
+type TxError = variant { InsufficientBalance };
+type TxRecord = record {
+  to : principal;
+  status : TxStatus;
+  from : principal;
+  timestamp : nat64;
+  index : nat64;
+  amount : nat;
+};
+type TxStatus = variant { Fail : TxError; Succeed };
+service : (principal, text, text, nat8, nat) -> {
+  getBalance : (principal) -> (nat) query;
+  getMetadata : () -> (Metadata) query;
+  getTxRecord : (nat64) -> (opt TxRecord) query;
+  getTxRecordSize : () -> (nat) query;
+  transfer : (principal, nat) -> (TxRecord);
+}
