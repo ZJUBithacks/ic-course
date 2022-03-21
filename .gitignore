@@ -1,0 +1,12 @@
+# Various IDEs and Editors
+.vscode/
+.idea/
+**/*~
+
+# dfx temporary files
+homework-submission/homework1/qsort/.dfx
+
+# frontend code
+homework-submission/homework1/qsort/node_modules
+homework-submission/homework1/qsort/dist
+homework-submission/homework1/qsort/src/declarations
