@@ -43,7 +43,7 @@ public shared(msg) func vote(...) {
 type VoteResult = {
     #Approved;
     #Rejected;
-}
+};
 public query func proposalResult(...) : async VoteResult {
     ...
 };
