@@ -1,0 +1,3 @@
+service : {
+  qsort: (vec int) -> (vec int);
+}
