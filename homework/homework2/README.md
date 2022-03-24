@@ -2,6 +2,7 @@
 - 创建提案
 ```
 type Proposal = {
+    id: Nat/Text;
     proposer: Principal;
     createTime: Time.Time;
     startTime: Time.Time;
@@ -10,6 +11,7 @@ type Proposal = {
     var againstVote: Nat;
 };
 type ProposalExt = {
+    id: Nat/Text;
     proposer: Principal;
     createTime: Time.Time;
     startTime: Time.Time;
@@ -55,5 +57,5 @@ public query func proposalResult(...) : async VoteResult {
 
 # 进阶（非必要）
 - 使用token canister中的余额作为票数
-- 涉及跨canister调用，以及异步编程
+- 涉及跨canister调用，以及异步编程(async/await)
 - 学有余力的同学可以尝试
