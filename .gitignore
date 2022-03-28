@@ -3,11 +3,21 @@
 .idea/
 **/*~
 
+.DS_Store
+
 # dfx temporary files
 homework-submission/homework1/qsort/.dfx
+homework-submission/homework2/vote/.dfx
 
 # frontend code
 homework-submission/homework1/qsort/node_modules
 homework-submission/homework1/qsort/dist
 homework-submission/homework1/qsort/src/declarations
 
+homework-submission/homework1/vote/node_modules
+homework-submission/homework1/vote/dist
+homework-submission/homework1/vote/src/declarations
+
+
+homework-submission/.DS_Store
+.DS_Store
