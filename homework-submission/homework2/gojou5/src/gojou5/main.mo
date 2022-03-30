@@ -90,6 +90,7 @@ actor Governance {
     if (TrieSet.mem(voteSet, voteId, Text.hash(voteId), Text.equal)) {
       return #err("User has already vote for this proposal");
     };
+    voteSet := TrieSet.put(voteSet, voteId, Text.hash(voteId), Text.equal);
     switch(voteType) {
       case (#Support) {
         proposal.supportVote += 1;
