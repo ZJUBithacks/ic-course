@@ -1,0 +1,134 @@
+body,
+button {
+    font-family: 'Noto Serif SC', serif;
+}
+
+body ,
+header,
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+}
+
+.tip {
+    color: #999;
+}
+
+footer {
+    font-size: 0.8rem;
+    clear: both;
+}
+
+footer p{
+    color: #666;
+    text-align: center;
+}
+
+
+section {
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.8rem;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    margin-top: 20px;
+    border-top: 3px solid;
+    border-top-color: #3D8FB8;
+    text-align: justify;
+}
+
+#todoList {
+    border-top-color: #3D8FB8;
+}
+
+#completeList {
+    border-top-color: #999;
+}
+
+
+
+input{
+    outline-style: none ;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    padding: 6px;
+    width: 300px;
+    height: 25px;
+    font-size: 14px;
+}
+
+select{
+    padding: 8px;
+    margin-left: 10px;
+    width: auto;
+    text-align: center;
+    appearance: none;
+    border-radius: 3px;
+    border-color: #ccc;
+}
+
+div#todoItem{
+    display: flex;
+    border-bottom: solid #ccc;
+    height: auto;
+}
+
+div#todoItem p{
+    /*width: 100px;*/
+    margin-right:auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+button {
+    border: none;
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    padding: 4px 4px;
+    margin: 2px 5px;
+}
+
+button#addButton {
+    background: #3d8fb8e0;
+    padding: 5px 10px;
+}
+button#addButton:hover:active {
+    background: #666;
+}
+
+
+div#todoItem button#todoComplete {
+    background: #3db893e0;
+}
+div#todoItem button#todoComplete:hover:active {
+    background: #666;
+}
+
+div#todoItem button#delCompleteButton {
+    background: rgb(144, 144, 144);
+}
+div#todoItem button#delCompleteButton:hover:active {
+    background: #666;
+}
+
+div#todoItem button#deleteButton {
+    background: rgb(222, 86, 86);
+}
+div#todoItem button#deleteButton:hover:active {
+    background: #666;
+}
+
+div#add {
+    display: flex;
+}
