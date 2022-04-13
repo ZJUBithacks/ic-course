@@ -1,4 +1,6 @@
 # 执行日志
+**ref** https://brson.github.io/2021/01/30/dfinity-impressions
+
 **注意**：直接看md原文能够有更清晰的格式输出
 
 Upgrading code for canister vote, with canister_id rrkah-fqaaa-aaaaa-aaaaq-cai

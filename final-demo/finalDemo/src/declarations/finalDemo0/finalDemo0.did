@@ -1,0 +1,100 @@
+type VoteType = 
+ variant {
+   Against;
+   Support;
+ };
+type VoteResultReceipt = 
+ variant {
+   Err: VoteResultErr;
+   Ok: VoteResult;
+ };
+type VoteResultErr = 
+ variant {
+   VoteDraw;
+   VoteNotExist;
+   VoteNotOver;
+ };
+type VoteResult = 
+ variant {
+   Approved;
+   Rejected;
+ };
+type VoteReceipt = 
+ variant {
+   Err: VoteErr;
+   Ok: ProposalExt;
+ };
+type VoteMsg = 
+ record {
+   id: text;
+   message: VoteResult;
+   topic: text;
+ };
+type VoteErr = 
+ variant {
+   VoteIsOver;
+   VoteNotBegin;
+   VoteNotExist;
+   VotePermissionDenied;
+   VoteRepeat;
+ };
+type TxRecord = 
+ record {
+   amount: nat;
+   from: principal;
+   index: nat;
+   status: Status;
+   timestamp: Time;
+   to: principal;
+ };
+type Time = int;
+type Subscriber = 
+ record {
+   callback: func (VoteMsg) -> () oneway;
+   topic: text;
+ };
+type Status = 
+ variant {
+   Fail: variant {InsuffcientBalance;};
+   Succeed;
+ };
+type ProposalExt = 
+ record {
+   againstVote: nat;
+   createTime: Time;
+   endTime: Time;
+   id: text;
+   proposer: principal;
+   startTime: Time;
+   supportVote: nat;
+ };
+type MetaData = 
+ record {
+   decimals: nat8;
+   name: text;
+   symbol: text;
+   totalSupply: nat;
+ };
+type Demo = 
+ service {
+   allFans: () -> (vec principal) query;
+   allVoteMsgs: () -> (vec VoteMsg) query;
+   createProposal: (text, int, int) -> () oneway;
+   follow: (principal, text, VoteType) -> (VoteReceipt);
+   getAllProrosal: () -> (vec ProposalExt) query;
+   getBalance: (principal) -> (nat) query;
+   getMetaData: () -> (MetaData) query;
+   getProposal: (text) -> (ProposalExt) query;
+   getTxRecord: (nat) -> (opt TxRecord) query;
+   getTxRecordSize: () -> (nat) query;
+   keeper: (text) -> ();
+   newFans: (principal) -> ();
+   proposalResult: (text) -> (VoteResultReceipt) query;
+   publish: (VoteMsg) -> () oneway;
+   saveVoteLog: (VoteMsg) -> () oneway;
+   subscribe: (Subscriber) -> () oneway;
+   transfer: (principal, nat) -> (TxRecord);
+   vote: (text, VoteType) -> (VoteReceipt);
+   watching: () -> (vec principal) query;
+ };
+service : () -> Demo

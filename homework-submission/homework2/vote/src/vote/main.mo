@@ -15,6 +15,8 @@ import Result "mo:base/Result";
 actor class vote (
 
 ){
+  private let SECOND_TO_NANOSECOND = 1_000_000_000;
+
   type Proposal = {
       id: Text;
       proposer: Principal;
@@ -55,8 +57,8 @@ actor class vote (
 
   private func _newProposal(id: Text, proposer: Principal, start: Int, end: Int) : Proposal {
     let createTime = Time.now();
-    let startTime = createTime + start * 1000000000;
-    let endTime = createTime + end * 1000000000;
+    let startTime = createTime + start * SECOND_TO_NANOSECOND;
+    let endTime = createTime + end * SECOND_TO_NANOSECOND;
     {
       id = id;
       proposer = proposer;

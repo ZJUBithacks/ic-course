@@ -1,0 +1,33 @@
+type List<T> = ?(T, List<T>);
+type Proposal =
+  {
+    var againstVote : Nat;
+    createTime : Time;
+    endTime : Time;
+    id : Text;
+    proposer : Principal;
+    startTime : Time;
+    var supportVote : Nat
+  };
+type Subscriber = {callback : shared VoteMsg -> (); topic : Text};
+type TxRecord =
+  {
+    amount : Nat;
+    from : Principal;
+    index : Nat;
+    status : Status;
+    timestamp : Time;
+    to : Principal
+  };
+type VoteMsg = {id : Text; message : VoteResult; topic : Text};
+actor {
+  stable var balanceEntries : [(Principal, Nat)];
+  stable var fans : ?(Principal, List<Principal>);
+  stable var following : ?(Principal, List<Principal>);
+  stable meta :
+    {decimals : Nat8; name : Text; symbol : Text; totalSupply : Nat};
+  stable var proposalsEntries : [(Text, Proposal)];
+  stable var recordArray : [TxRecord];
+  stable var subscribers : ?(Subscriber, List<Subscriber>);
+  stable var voteMsgs : ?(VoteMsg, List<VoteMsg>)
+};
