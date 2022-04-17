@@ -4,7 +4,8 @@ import { Actor, HttpAgent } from "@dfinity/agent";
 import { idlFactory } from './time_capsule.did.js';
 export { idlFactory } from './time_capsule.did.js';
 // CANISTER_ID is replaced by webpack based on node environment
-export const canisterId = "7midt-xaaaa-aaaai-qjdma-cai";
+export const canisterId = process.env.TIME_CAPSULE_CANISTER_ID;
+
 /**
  * 
  * @param {string | import("@dfinity/principal").Principal} canisterId Canister ID of Agent

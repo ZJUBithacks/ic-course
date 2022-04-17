@@ -1,0 +1,32 @@
+type Time = int;
+type GetCapsuleResponse = 
+ variant {
+   err: text;
+   ok: CapsuleResponse;
+ };
+type CreateCapsuleResponse = 
+ variant {
+   err: text;
+   ok: nat;
+ };
+type CreateCapsuleArgs = 
+ record {
+   content: text;
+   to: opt principal;
+   unlockTime: Time;
+ };
+type CapsuleResponse = 
+ record {
+   content: opt text;
+   creator: principal;
+   id: nat;
+   sealedTime: Time;
+   to: opt principal;
+   unlockTime: Time;
+ };
+service : {
+  createCapsule: (CreateCapsuleArgs) -> (CreateCapsuleResponse);
+  getAllCapsules: () -> (vec CapsuleResponse) query;
+  getCapsule: (nat) -> (GetCapsuleResponse) query;
+  getUserCapsules: () -> (vec CapsuleResponse) query;
+}
