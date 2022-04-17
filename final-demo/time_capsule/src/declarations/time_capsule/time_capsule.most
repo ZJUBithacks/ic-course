@@ -1,0 +1,12 @@
+type Capsule =
+  {
+    content : Text;
+    creator : Principal;
+    id : Nat;
+    sealedTime : Time;
+    to : ?Principal;
+    unlockTime : Time
+  };
+actor {
+  stable var capsules_upgrade : [Capsule]
+};
