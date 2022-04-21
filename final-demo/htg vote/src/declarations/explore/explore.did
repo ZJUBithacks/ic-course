@@ -1,0 +1,38 @@
+type VoteType = 
+ variant {
+   Against;
+   Support;
+ };
+type VoteResult = 
+ variant {
+   Approved;
+   Error: text;
+   Rejected;
+ };
+type Time = int;
+type Result_1 = 
+ variant {
+   err: text;
+   ok: ProposalExt;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type ProposalExt = 
+ record {
+   againstVote: nat;
+   createTime: Time;
+   endTime: Time;
+   id: text;
+   proposer: principal;
+   startTime: Time;
+   supportVote: nat;
+ };
+service : {
+  createProposal: (text, int, int) -> (Result_1);
+  getProposal: (text) -> (ProposalExt) query;
+  proposalResult: (text) -> (VoteResult) query;
+  vote: (text, VoteType) -> (Result);
+}
