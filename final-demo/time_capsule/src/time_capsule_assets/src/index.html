@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>time_capsule</title>
+  <base href="/" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+
+<body>
+  <Header>
+    <h1>TimeCapsule</h1>
+    <p>
+      Seal your message in time capsule⏰. &nbsp;
+      <button id="loginButton"> Login </button>
+    </p>
+    <!-- <nav>
+      <a href="index.html">Home</a>
+      <a href="create.html">Create</a>
+    </nav> -->
+  </Header>
+
+  <main>
+    <h3>Received</h3>
+    <section id="received"></section>
+    <h3>All</h3>
+    <section id="all"></section>
+    <hr>
+    <form action="#">
+      <label for="to">To: &nbsp;</label>
+      <input id="to" alt="to" type="text" placeholder="as Principal">
+      <p>
+        <input type="checkbox" name="toAll" id="toAll"> Send to All?
+      </p>
+      <label for="to">End time: &nbsp;</label>
+      <input type="datetime-local" name="time" id="time">
+      <textarea name="content" id="content" cols="35" rows="5"></textarea>
+      <br>
+      <button type="submit" id="confirm">Confirm</button>
+    </form>
+  </main>
+
+  <footer>
+    <p> TimeCapsule by yf </p>
+  </footer>
+</body>
+
+</html>

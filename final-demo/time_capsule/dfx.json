@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "time_capsule": {
+      "main": "src/time_capsule/main.mo",
+      "type": "motoko"
+    },
+    "time_capsule_assets": {
+      "dependencies": [
+        "time_capsule"
+      ],
+      "frontend": {
+        "entrypoint": "src/time_capsule_assets/src/index.html"
+      },
+      "source": [
+        "src/time_capsule_assets/assets",
+        "dist/time_capsule_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
