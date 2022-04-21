@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>finalDemo</title>
+    <base href="/" />
+    <link rel="icon" href="favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Advance Vote</h1>
+    </header>
+    <main>
+      <h4 id="id_section">当前Canister ID：</h4>
+    
+      <form> 
+        <div>
+        <label>New Proposal:</label> 
+        <input type="text" id="new_proposal" placeholder="请输入要提起的投票🐶" style="width:400px"/>
+        </div>  
+        <div>
+          <label>StartTime:</label> 
+          <input id="st" type="number" placeholder="/s" style="width:60px" required />
+        </div>
+        <div>
+          <label>EndTime:</label> 
+          <input id="et" type="number" placeholder="/s" style="width:60px" required/>
+        </div>
+        <button name="proposal" id="proposal_button"> Proposal </button>
+        <span id="prompt"></span>
+      </form>
+
+      <form>
+        <p>Find Proposal:</p>
+        <input type="text" id="find_proposal" placeholder="请输入要寻找的投票ID🔍"/>
+        <button id="getbyid_button"> search </button>
+      </form>
+      <div id="get_by_id"></div>
+
+      <form>
+        <label>Show All :</label>
+        <button id="showall_button"> search </button>
+        <button id="clear_button"> clear </button>
+        <div id="get_all"></div>
+      </form>
+      
+      <br>
+      <input type="text" id="votefor_id" placeholder="请表示你对投票ID的意见❓" />
+      <button name="vote_support" id="support_button"> support </button>
+      <button name="vote_against" id="against_button"> against </button>
+      <span id="prompt1"></span>
+      <br>
+      
+      <form>
+        <p>Get Receipt:</p>
+        <input type="text" id="get_receipt" placeholder="通过投票ID获取回执"/>
+        <button id="receipt_button"> search </button>
+      </form>
+      <div id="getreceipt_by_id"></div>
+      
+  
+    </main>
+  </body>
+</html>
