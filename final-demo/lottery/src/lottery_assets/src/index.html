@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>lottery</title>
+    <base href="/" />
+    <link rel="icon" href="favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <!-- <span id="prompt"></span> -->
+      <img src="logo.png" alt="DFINITY logo" />
+      <!-- <section id="canisterId"></section> -->
+      <form>
+        <label for="lotteryWinner">Lottery Winner(s):&nbsp;</label>
+        <section id="lotteryWinner"></section>
+      </form>
+      <form action="#">
+        <label for="range">Enter range: &nbsp;</label>
+        <input id="range" alt="Range" type="number" />
+        <label for="range">Enter sum: &nbsp;</label>
+        <input id="sum" alt="Sum" type="number" />
+        <label>&nbsp;</label>
+        <br>
+        <button id="runLotteryButton" type="submit">Simple Lottery</button>
+      </form>
+      <form>
+        <label for="prize">Enter prize:</label>
+        <input id="prize" alt="Prize" type="number" />
+        <br>
+        <button id="postNewLotteryButton" type="submit">Post New Lottery</button>
+      </form>
+      <form>
+        <button id="participateButton" type="submit">Participate</button>
+      </form>
+      <form>
+        <button id="runFullLotteryButton" type="submit">Full Lottery</button>
+      </form>
+      <form>
+        <label for="participants">Participants:&nbsp;</label>
+        <section id="participants"></section>
+        <button id="listParticipantsButton" type="submit">List Participants</button>
+      </form>
+      <form>
+        <label for="lotteries">Lotteries:&nbsp;</label>
+        <section id="lotteries"></section>
+        <button id="listLotteriesButton" type="submit">List Lotteries</button>
+      </form>
+      <!-- <form>
+        <label for="timeline">Timeline:&nbsp;</label>
+        <section name="timeline" id="timelineSection"></section>
+        <button id="showTimelineButton" type="submit">Show Timeline</button>
+      </form> -->
+    </main>
+  </body>
+</html>
