@@ -22,3 +22,5 @@ homework-submission/homework1/qsort/src/declarations
 # frontend code
 **/node_modules/
 **/dist/
+
+**/declarations/

@@ -17,9 +17,19 @@
     <main>
       <h4 id="id_section">当前Canister ID：</h4>
     
-      <form>
-        <p>New Proposal:</p> 
-        <input type="text" id="new_proposal" placeholder="请输入要提起的投票🐶"/>
+      <form> 
+        <div>
+        <label>New Proposal:</label> 
+        <input type="text" id="new_proposal" placeholder="请输入要提起的投票🐶" style="width:400px"/>
+        </div>  
+        <div>
+          <label>StartTime:</label> 
+          <input id="st" type="number" placeholder="/s" style="width:60px" required />
+        </div>
+        <div>
+          <label>EndTime:</label> 
+          <input id="et" type="number" placeholder="/s" style="width:60px" required/>
+        </div>
         <button name="proposal" id="proposal_button"> Proposal </button>
         <span id="prompt"></span>
       </form>
@@ -32,8 +42,9 @@
       <div id="get_by_id"></div>
 
       <form>
-        <p>Show All :</p>
+        <label>Show All :</label>
         <button id="showall_button"> search </button>
+        <button id="clear_button"> clear </button>
         <div id="get_all"></div>
       </form>
       
@@ -41,6 +52,7 @@
       <input type="text" id="votefor_id" placeholder="请表示你对投票ID的意见❓" />
       <button name="vote_support" id="support_button"> support </button>
       <button name="vote_against" id="against_button"> against </button>
+      <span id="prompt1"></span>
       <br>
       
       <form>
