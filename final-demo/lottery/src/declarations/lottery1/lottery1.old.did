@@ -1,0 +1,17 @@
+type Time = int;
+type LotteryInfo = 
+ record {
+   lotteryWinner: text;
+   prize: nat;
+   range: nat;
+   startTime: Time;
+   sum: nat;
+ };
+service : {
+  listLotteries: () -> (vec LotteryInfo) query;
+  listParticipants: () -> (vec principal) query;
+  participate: (principal) -> ();
+  postNewLottery: (nat, nat, nat) -> (Time);
+  runFullLottery: () -> (nat);
+  runLottery: (nat, nat) -> (vec nat);
+}
