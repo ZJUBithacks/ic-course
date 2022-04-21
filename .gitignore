@@ -24,3 +24,7 @@ homework-submission/homework1/qsort/src/declarations
 **/dist/
 
 **/declarations/
+final-demo/yifanweng/todolist/.dfx
+final-demo/yifanweng/todolist/node_modules
+final-demo/yifanweng/todolist/dist
+final-demo/yifanweng/todolist/src/declarations

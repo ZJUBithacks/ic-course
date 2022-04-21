@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>todolist</title>
+    <base href="/" />
+    <link rel="icon" href="favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>提醒事项</h1>
+    </header>
+    <main>
+      <div id="add">
+        <input name="todoContent" id="todoContent" placeholder="请输入提醒事项"></input>
+        <select name="priority" id="priority">
+          <option value="">选择优先级</option>
+          <option value="0">low</option>
+          <option value="1">medium</option>
+          <option value="2">high</option>
+        </select>
+        <button name="addButton" id="addButton"> Add </button>
+        <!-- <div class="load-ctn">
+          <button class="load-btn" name="addButton" id="addButton">添加事项</button>
+        </div> -->
+      </div>
+      <br>
+      <div id="todo">
+        <p id="todoListCount" class="tip"></p>
+        <section name="todoList" id="todoList"></section>
+      </div>
+      <div id="complete">
+        <p id="completeListCount" class="tip"></p>
+        <section name="completeList" id="completeList"></section>
+      </div>
+    </main>
+    <footer>
+      <p class="center-text">Copyright © 2022 Mouweng All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
